@@ -1,0 +1,27 @@
+<div [class]="theme">
+  <h2>{{ title }}</h2>
+
+  <div>
+    <a [routerLink]="['./header']">header</a> |
+    <a [routerLink]="['./ng-for']">NgFor</a> | 
+    <a [routerLink]="['./ng-forms']">NgForms</a> |
+    <a [routerLink]="['./color']">color</a>
+  </div>
+
+  <router-outlet></router-outlet>
+
+  <!-- <ng-container>
+    <div app-header>
+      <p question>Is content projection cool?</p>
+      <ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+
+      <ng-template #myTemplate>
+        <p>Let's learn about content projection!</p>
+      </ng-template>
+    </div>
+  </ng-container> -->
+
+  <button (click)="switchIsNeedHeader()">switch need header</button>
+</div>
+
+<div app-ng-for></div>

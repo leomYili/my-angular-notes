@@ -1,0 +1,23 @@
+:host {
+  margin: auto 20px;
+  font-size: 18px;
+  color: #fff;
+  border: 1px dashed #ccc;
+  background-color: blue;
+  font-style: italic;
+}
+
+// 继承于父元素的样式,并不直接在当前元素上添加样式
+:host-context(.dark-theme) {
+  $width: 100%;
+
+  .content {
+    width: $width;
+    background-color: #000;
+  }
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
