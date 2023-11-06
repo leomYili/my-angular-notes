@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  <h2>这里是针对ag-grid表格编写的试用例子</h2>
+  <ul nz-menu nzMode="horizontal">
+    <li nz-menu-item nzSelected>
+      <a routerLink="/demo1">针对ag-grid的学习用法</a>
+    </li>
+    <li nz-menu-item>
+      <a routerLink="/demo2">大数据量创建模拟渲染</a>
+    </li>
+    <li nz-menu-item>
+      <a routerLink="/demo3">前置任务切片实例</a>
+    </li>
+
+  </ul>
+  <div class="demo-content">
+    <h2>实例演示</h2>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

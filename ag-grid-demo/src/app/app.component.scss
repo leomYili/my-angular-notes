@@ -1,0 +1,17 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container {
+  margin: 0 50px;
+  padding: 0;
+}
+
+.demo-content {
+  padding: 30px;
+}

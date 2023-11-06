@@ -1,0 +1,54 @@
+<p>用常见的页面交互行为去测试大数据量计算时对页面渲染的影响</p>
+<p>
+  这里通过两种常见的行为:1.
+  内存中有一个占用很多性能的任务阻塞页面渲染或者交互;2.大批次操作页面元素导致的页面渲染卡顿;这两种场景去说明任务切片的必要性
+</p>
+
+<div class="content">
+  <div class="title">不使用任务切片</div>
+  <div class="block">
+    <input
+      style="width:200px"
+      nz-input
+      placeholder="在执行任务之后可以测试下交互"
+      [(ngModel)]="value1"
+      type="text"
+    />
+  </div>
+  <button nz-button nzType="primary" (click)="onClickToBigDataNoTask()">
+    执行长计算任务
+  </button>
+  <button nz-button nzType="default" (click)="onClickToRenderNoTask()">
+    执行长渲染任务
+  </button>
+  <!-- box容器 -->
+  <div class="box" [formGroup]="list1">
+    <ng-container #agHost1></ng-container>
+  </div>
+  <div class="result">
+    执行任务的结果为:{{ result1 }};执行任务花费的时间为:{{ time1 }}ms
+  </div>
+</div>
+<div class="content border-color-blue">
+  <div class="title">使用任务切片</div>
+  <div class="block">
+    <input
+      style="width:200px"
+      nz-input
+      placeholder="在执行任务之后可以测试下交互"
+      [(ngModel)]="value2"
+      type="text"
+    />
+  </div>
+  <button nz-button nzType="primary" (click)="onClickToBigDataUseTask()">
+    执行长计算任务
+  </button>
+  <button nz-button nzType="default" (click)="onClickToRenderUseTask()">执行长渲染任务</button>
+  <!-- box容器 -->
+  <div class="box" [formGroup]="list2">
+    <ng-container #agHost2></ng-container>
+  </div>
+  <div class="result">
+    执行任务的结果为:{{ result2 }};执行任务花费的时间为:{{ time2 }}ms
+  </div>
+</div>

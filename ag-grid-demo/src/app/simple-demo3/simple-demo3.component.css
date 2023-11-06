@@ -1,0 +1,20 @@
+.content {
+  border: 1px solid green;
+  margin-bottom: 20px;
+}
+
+.border-color-blue {
+  border-color: blue;
+}
+
+.box {
+  height: 200px;
+  width: 100%;
+  overflow: auto;
+  margin: 24px 0px;
+  background-color: beige;
+}
+
+.block {
+  margin: 30px;
+}

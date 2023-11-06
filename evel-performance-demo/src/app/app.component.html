@@ -1,0 +1,9 @@
+<div>
+  <button (click)="onSimpleScript()">传递一个简易代码段</button>
+  <button (click)="onMuScript()">传递一个递归爆栈的代码段</button>
+  <textarea [ngModel]="script" (ngModelChange)="setScript($event)">
+输入一个自定义的脚本进行测试</textarea
+  >
+
+  <div>脚本:{{ script }}</div>
+</div>

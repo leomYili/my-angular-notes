@@ -1,0 +1,15 @@
+<ng-container *ngIf="!isRender">
+  <input
+    nz-input
+    [placeholder]="placeholder"
+    [(ngModel)]="value"
+    (ngModelChange)="onChange($event)"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+  />
+</ng-container>
+
+<ng-container *ngIf="isRender">
+  <div class="render-container">{{ value || emptyValue }}</div>
+  <div class="editable-hover-container">{{ value || placeholder }}</div>
+</ng-container>
