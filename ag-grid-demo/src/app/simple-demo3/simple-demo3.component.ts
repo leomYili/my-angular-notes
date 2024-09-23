@@ -45,7 +45,7 @@ export class SimpleDemo3Component implements OnInit {
 
   // 执行大数据量计算工作,不使用任务切片
   onClickToBigDataNoTask() {
-    const total = 300000;
+    const total = 30000;
     const start = performance.now();
 
     let sum = 0;
@@ -63,7 +63,7 @@ export class SimpleDemo3Component implements OnInit {
   // 执行大数据量计算工作,使用任务切片
   onClickToBigDataUseTask() {
     let _this = this;
-    let total = 300000;
+    let total = 30000;
 
     let sum = 0;
     const start = performance.now();
@@ -175,7 +175,7 @@ export class SimpleDemo3Component implements OnInit {
           _this.list2 = new FormGroup(list);
 
           // 微任务不会自动检测变更,这里需要手动更新一下
-          _this.cd.detectChanges();
+          _this.cd.markForCheck();
         }
       }
     }

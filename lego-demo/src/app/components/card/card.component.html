@@ -1,0 +1,4 @@
+<c-slot [name]="'root'" [wrappers]="props.wrappers">
+  <c-slot [name]="'text'" [wrappers]="props.wrappers"><div class="title">name: {{ state.name }}</div></c-slot>
+  <c-slot [name]="'text'" [wrappers]="props.wrappers">age: {{ state.age }}</c-slot>
+</c-slot>

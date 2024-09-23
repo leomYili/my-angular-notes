@@ -1,16 +1,21 @@
 <!-- 注释此处 -->
-<ag-grid-angular
-  #myGrid
-  style="width: 500px; height: 350px"
-  class="ag-theme-alpine"
-  [masterDetail]="masterDetail"
-  [rowData]="rowData"
-  [columnDefs]="columnDefs"
-  [rowSelection]="'multiple'"
-  [animateRows]="true"
-  [defaultColDef]="defaultColDef"
-  [suppressDragLeaveHidesColumns]="true"
-  [enableRangeSelection]="enableRangeSelection"
-  [enableRangeHandle]="enableRangeHandle"
->
-</ag-grid-angular>
+<div class="demo-container" style="width: 500px; height: 350px">
+  <ag-grid-angular
+    #myGrid
+    style="width: 100%; height: 100%"
+    class="ag-theme-alpine"
+    [masterDetail]="masterDetail"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [rowSelection]="'multiple'"
+    [animateRows]="true"
+    [defaultColDef]="defaultColDef"
+    [suppressDragLeaveHidesColumns]="true"
+    [enableRangeSelection]="enableRangeSelection"
+    [enableRangeHandle]="enableRangeHandle"
+    [sideBar]="sideBar"
+    [frameworkComponents]="frameworkComponents"
+  >
+  </ag-grid-angular>
+  <div class="custom-side-bar"></div>
+</div>

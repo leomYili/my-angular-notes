@@ -1,0 +1,20 @@
+<div class="demo4">
+  <h3>测试虚拟滚动</h3>
+
+  <cdk2-virtual-scroll-viewport autosize style="height:300px">
+    <div *cdkVirtualFor="let person of data; let i = index">
+      <div class="card">
+        <img src="https://i.imgur.com/63S0RAq.png" alt="Avatar" />
+        <div class="container">
+          <h4>
+            <b>{{ person.name }}</b>
+          </h4>
+          <h4>
+            <b>ID: {{ i }}</b>
+          </h4>
+          <p>{{ person.bio.substr(0, 30) }}...</p>
+        </div>
+      </div>
+    </div>
+  </cdk2-virtual-scroll-viewport>
+</div>

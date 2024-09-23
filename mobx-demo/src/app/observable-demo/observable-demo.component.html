@@ -1,0 +1,10 @@
+<div class="box">
+  <div>observable例子</div>
+
+  <div>{{ obsTitle.title }}</div>
+
+  <div *ngFor="let hero of obsList; let i = index">({{ i }}) {{ hero }}</div>
+
+  <button title="sdsd" (click)="onClick1($event)">修改title的值</button>
+  <button title="sdsd" (click)="onClick2($event)">修改list的值</button>
+</div>

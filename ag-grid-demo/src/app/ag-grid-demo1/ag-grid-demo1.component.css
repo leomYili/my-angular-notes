@@ -1,0 +1,18 @@
+.demo-container {
+  width: 500px;
+  height: 350px;
+  position: relative;
+}
+
+.custom-side-bar {
+  width: 30px;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.container .ag-theme-alpine .ag-ltr .ag-side-bar-right {
+  border: none;
+}

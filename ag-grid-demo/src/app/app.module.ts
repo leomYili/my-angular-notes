@@ -19,10 +19,25 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzInputModule } from 'ng-zorro-antd/input';
 
+import {} from '@ngrx/component-store';
+import {} from '@ngrx/store-devtools';
+import {} from '@ngrx/component';
+
+import {} from '@ngrx/effects';
+import { Store } from '@ngrx/store';
+import {} from '@ngrx/router-store';
+
+import { ScrollingModule } from './components/scrolling';
+import { CustomStatsToolPanel } from './components/custom-stats-tool-panel/custom-stats-tool-panel';
+
 import { CellInputComponent } from './table-component/cell-input/cell-input.component';
 import { AgGridDemo2Component } from './ag-grid-demo2/ag-grid-demo2.component';
 import { SimpleDemo3Component } from './simple-demo3/simple-demo3.component';
 import { SimpleItemComponent } from './simple-item/simple-item.component';
+import { SimpleDemo4Component } from './simple-demo4/demo4.component';
+import { VirtualScrollingDirective } from './simple-demo4/virtual-scrolling.directive';
+import { VirtualForOf } from './simple-demo4/virtual-for-of.directive';
+import { SimpleDemo5Component } from './simple-demo5/demo5.component';
 
 registerLocaleData(zh);
 
@@ -33,7 +48,12 @@ registerLocaleData(zh);
     CellInputComponent,
     AgGridDemo2Component,
     SimpleDemo3Component,
-    SimpleItemComponent
+    SimpleDemo4Component,
+    SimpleItemComponent,
+    VirtualScrollingDirective,
+    VirtualForOf,
+    CustomStatsToolPanel,
+    SimpleDemo5Component
   ],
   imports: [
     BrowserModule,
@@ -45,7 +65,8 @@ registerLocaleData(zh);
     NzDividerModule,
     NzMenuModule,
     NzInputModule,
-    AgGridModule
+    AgGridModule.withComponents([CustomStatsToolPanel]),
+    ScrollingModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
